@@ -1,0 +1,10 @@
+{
+  "info": { "name": "Clinic API", "_postman_id": "clinic-001", "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json" },
+  "item": [
+    { "name": "Criar Plano", "request": { "method": "POST", "header": [{"key":"Content-Type","value":"application/json"}], "body": {"mode":"raw","raw":"{\"nome\":\"Plano Ouro\",\"limite_cobertura\":20000,\"data_vencimento\":\"2026-12-31\",\"operadora\":\"SaudePlus\"}"}, "url":{"raw":"http://localhost:3000/planos","protocol":"http","host":["localhost"],"port":"3000","path":["planos"]}} },
+    { "name": "Criar Paciente", "request": { "method": "POST", "body": {"mode":"raw","raw":"{\"nome\":\"Joao Silva\",\"cpf\":\"123.456.789-00\",\"email\":\"joao@mail.com\",\"telefone\":\"(11)99999-1111\",\"endereco\":\"Rua A, 100\",\"data_nascimento\":\"1985-04-10\",\"plano_id\":1}"}, "url":{"raw":"http://localhost:3000/pacientes","protocol":"http","host":["localhost"],"port":"3000","path":["pacientes"]}} },
+    { "name": "Criar Medico", "request": { "method": "POST", "body": {"mode":"raw","raw":"{\"nome\":\"Dra. Helena\",\"especialidade\":\"Cardiologia\",\"crm\":\"CRM-SP-112233\"}"}, "url":{"raw":"http://localhost:3000/medicos","protocol":"http","host":["localhost"],"port":"3000","path":["medicos"]}} },
+    { "name": "Criar Consulta (valida plano)", "request": { "method": "POST", "body": {"mode":"raw","raw":"{\"data_hora\":\"2025-11-22T10:30:00\",\"valor\":150.0,\"paciente_id\":1,\"medico_id\":1}"}, "url":{"raw":"http://localhost:3000/consultas","protocol":"http","host":["localhost"],"port":"3000","path":["consultas"]}} },
+    { "name": "Relatorio Financeiro", "request": { "method": "GET", "url":{"raw":"http://localhost:3000/consultas/relatorio-financeiro","protocol":"http","host":["localhost"],"port":"3000","path":["consultas","relatorio-financeiro"]}} }
+  ]
+}
